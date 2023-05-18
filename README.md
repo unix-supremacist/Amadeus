@@ -1,6 +1,10 @@
 # Amadeus
 
-repo for my rice/DE
+Repository for my desktop enviroment/rice
+
+## How to install
+
+`doas make install`
 
 ## Design
 
@@ -13,8 +17,12 @@ the plan is to have a complete desktop enviroment that is extremely light-weight
 ## Linux
 
 on linux if possible build the software statically linked against musl.
+
 also install doas via pacman automatically.
+
 build aureate for aur.
+
+requires bmake.
 
 ## Modules
 

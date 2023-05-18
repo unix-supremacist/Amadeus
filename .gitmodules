@@ -1,0 +1,6 @@
+[submodule "st"]
+	path = st
+	url = https://github.com/unix-supremacist/st
+[submodule "dmenu"]
+	path = dmenu
+	url = https://github.com/unix-supremacist/dmenu
