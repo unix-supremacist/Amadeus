@@ -12,7 +12,7 @@ The code under this repository and not submodules is dual licensed under GPL2 an
 
 ## Design
 
-this will be a standard suckless rice for artix-openrc, hyperbola-linux, openbsd, and hyperbola-bsd (when it exists)
+this will be a standard suckless rice for Artix-openrc, HyperbolaLinux, OpenBSD, and HyperbolaBSD (when it exists)
 
 each software module will be using git submodules and i'll have a single makefile/shellscript to install everything at once.
 
@@ -44,14 +44,13 @@ dvtm, honestly i don't know much that would be modified.
 
 ### Shell
 
-on openbsd/hyperbola-bsd use the default user shell, on linux statically link a version of oksh and install it.
+on OpenBSD/HyperbolaBSD use the default user shell, on linux statically link a version of openbsd ksh and install it.
 
 on both compile a statically linked version of dash for /bin/sh.
-if toybox sh matures potentionally install it or a fork for /bin/bash.
 
-### Text Editor
+see toybox for a bash install on openbsd/hyperbola-bsd
 
-vis, but with transparency fixed, maybe clean up some of the code because it's actually very bloated.
+apparently to get out of gnu autoconfigure hell, i'll need to make forks of both openbsd ksh and dash with a custom buildscript.
 
 ### File Handler
 
@@ -89,6 +88,24 @@ install mpv on the system.... i'd like a more suckless solution but not happenin
 ### File Manager
 
 SFM is cool but isn't featured enough for mainstream use, pcmanfm doesn't work with a keyboard oriented system, may need to write a custom solution, but for now include nothing.
+
+## Toybox Modules
+
+include a fork of toybox setup to compile standalone binaries and include some of these on install, maybe implement more than what i mention here but these are the big ones.
+
+### Text Editor
+
+vi, it's very minimal, possibly name it tbvi or tvi on systems that have standard vi.
+
+maybe manually implement some vis/vim features.
+
+### Bash
+
+build toysh for /bin/bash on OpenBSD/HyperbolaBSD
+
+### Top
+
+top, very minimal basically same speel as vi, but possibly named tbop, ttop, and maybe implement htop features.
 
 ## Wayland
 
