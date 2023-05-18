@@ -4,6 +4,8 @@ Repository for my desktop enviroment/rice
 
 ## How to install
 
+`git clone --recursive https://github.com/unix-supremacist/Amadeus.git`
+
 `#make install`
 
 ## Design
@@ -14,11 +16,11 @@ each software module will be using git submodules and i'll have a single makefil
 
 the plan is to have a complete desktop enviroment that is extremely light-weight and obviously stylized around steins;gate though default color scheme will probably be gruvbox
 
-## Linux
-
 on linux if possible build the software statically linked against musl.
 
-build aureate for aur.
+## Linux
+
+builds aureate for aur.
 
 installs doas.
 
@@ -85,3 +87,7 @@ install mpv on the system.... i'd like a more suckless solution but not happenin
 ### File Manager
 
 SFM is cool but isn't featured enough for mainstream use, pcmanfm doesn't work with a keyboard oriented system, may need to write a custom solution, but for now include nothing.
+
+## Wayland
+
+Wayland would be considered, but there is not a good suckless image viewer like nsxiv, and wayland doesn't work on my current hardware, if this is solved i'll consider it.
