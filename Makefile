@@ -17,8 +17,6 @@ install: install_packages
 	$(MAKE) install -C st/
 	$(MAKE) install -C dmenu/
 .if "${PLATFORM}" == "Linux"
-# temp until aureate builds on install
-	$(MAKE) -C aureate/
 	$(MAKE) install -C aureate/
 .endif
 

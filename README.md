@@ -2,6 +2,8 @@
 
 Repository for my desktop enviroment/rice
 
+The code under this repository and not submodules is dual licensed under GPL2 and LGPL2.1.
+
 ## How to install
 
 `git clone --recursive https://github.com/unix-supremacist/Amadeus.git`
