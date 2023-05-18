@@ -8,8 +8,8 @@ endif
 install: install_bmake
 	bmake install
 
-uninstall:
+uninstall: install_bmake
 	bmake uninstall
 
-clean:
+clean: install_bmake
 	bmake clean
