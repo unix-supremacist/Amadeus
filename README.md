@@ -71,7 +71,7 @@ the shell prompt should just be my fork of promptless cleaned up, and a linux/bs
 
 ### Image Viewer
 
-fork of nsxiv with some better defaults.
+fork of nsxiv with some better defaults, and making sure it respects xresources.
 
 ### Document Viewer
 

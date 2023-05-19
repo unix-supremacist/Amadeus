@@ -7,3 +7,6 @@
 [submodule "aureate"]
 	path = aureate
 	url = https://github.com/unix-supremacist/aureate
+[submodule "nsxiv"]
+	path = nsxiv
+	url = https://github.com/unix-supremacist/nsxiv
