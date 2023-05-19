@@ -10,3 +10,6 @@
 [submodule "nsxiv"]
 	path = nsxiv
 	url = https://github.com/unix-supremacist/nsxiv
+[submodule "samurai"]
+	path = samurai
+	url = https://github.com/unix-supremacist/samurai

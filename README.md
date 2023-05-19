@@ -10,6 +10,12 @@ The code under this repository and not submodules is dual licensed under GPL2 an
 
 `#make install`
 
+## How to Uninstall
+
+`#make uninstall`
+
+note that this doesn't uninstall the doas, mpv packages, and it does not currently uninstall samurai.
+
 ## Design
 
 this will be a standard suckless rice for Artix-openrc, HyperbolaLinux, OpenBSD, and HyperbolaBSD (when it exists)
@@ -32,7 +38,11 @@ installs bmake.
 
 ### Window Manager
 
-this will be a minimized fork of dwm with some creature comforts, xresources support and improved floating window mode, not to say that floating windows will be first priority.
+this will be a minimized fork of dwm with some creature comforts, no bar, xresources support and improved floating window mode, not to say that floating windows will be first priority.
+
+### Clock
+
+have the DE give a time notification every hour.
 
 ### Terminal Emulator
 
@@ -65,6 +75,8 @@ Use herbe to display notifications, tiramisu as the notification daemon, allow s
 
 dmenu fork with xresources for now, i'd rather launch a floating terminal with a terminal selection application so that it's easier to maintain a potentional non-x11 version of the DE in the future, if there is a decent alternative to x11.
 
+maybe swap to launching smenu in a terminal, needs to kill autonconfigure.
+
 ### Prompt
 
 the shell prompt should just be my fork of promptless cleaned up, and a linux/bsd opfetch should be ran on the terminal launch.
@@ -88,6 +100,18 @@ install mpv on the system.... i'd like a more suckless solution but not happenin
 ### File Manager
 
 SFM is cool but isn't featured enough for mainstream use, pcmanfm doesn't work with a keyboard oriented system, may need to write a custom solution, but for now include nothing.
+
+### Wallpaper
+
+potentionally use xwallpaper but it needs to be spedup on openbsd, and autoconfgiure needs to be killed.
+
+### Bookmarks
+
+xdotool bookmarks.
+
+### Swallow
+
+simple swallow script with alias for nsxiv and mpv
 
 ## Toybox Modules
 
