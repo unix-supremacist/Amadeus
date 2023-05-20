@@ -26,6 +26,8 @@ the plan is to have a complete desktop enviroment that is extremely light-weight
 
 on linux if possible build the software statically linked against musl.
 
+maybe make a modular system to allow the user to select modules of the install.
+
 ## Linux
 
 builds aureate for aur.
@@ -112,6 +114,12 @@ xdotool bookmarks.
 ### Swallow
 
 simple swallow script with alias for nsxiv and mpv
+
+### Image Editor
+
+libresprite should automatically be built via samurai, though this should be an optimal module.
+
+maybe build gimp too but autoconfigure would have to be killed.
 
 ## Toybox Modules
 
