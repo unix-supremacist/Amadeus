@@ -6,6 +6,8 @@ The code under this repository and not submodules is dual licensed under GPL2 an
 
 ## How to install
 
+note for now you have to manually configure cproc, i'll eventually kill all the evil that is configure scripts in the forks for this project.
+
 `git clone --recursive https://github.com/unix-supremacist/Amadeus.git`
 
 `#make install`

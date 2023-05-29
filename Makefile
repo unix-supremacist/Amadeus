@@ -1,23 +1,27 @@
 PLATFORM != uname
+CPROC != command -v cproc
+DOAS != command -v doas
 
-.if "${PLATFORM}" == "OpenBSD"
-MAKE = make
-.endif
-
-.if "${PLATFORM}" == "Linux"
-MAKE = bmake
+.if "${CPROC}" == ""
+	$(MAKE) install -C cproc/
+	$(MAKE) install -C cproc/qbe/
 .endif
 
 install_packages:
 .if "${PLATFORM}" == "Linux"
+.if "${DOAS}" == ""
 	pacman --noconfirm -Sy doas mpv
+.endif
 .endif
 
 install: install_packages
 	$(MAKE) install -C st/
-	$(MAKE) install -C dmenu/
-	$(MAKE) install -C nsxiv/
+#todo why is dmenu/nsxiv not building on cproc?
+	CC=cc $(MAKE) install -C dmenu/
+	CC=cc $(MAKE) install -C nsxiv/
 	$(MAKE) install -C samurai/
+	$(MAKE) install -C cproc/
+	CC=cc $(MAKE) install -C cproc/qbe/
 .if "${PLATFORM}" == "Linux"
 	$(MAKE) install -C aureate/
 .endif
@@ -28,6 +32,8 @@ uninstall:
 	$(MAKE) uninstall -C nsxiv/
 #todo add uninstall recipe in the samurai makefile	
 #	$(MAKE) uninstall -C samurai/
+#	$(MAKE) uninstall -C cproc/
+	$(MAKE) uninstall -C cproc/qbe/
 .if "${PLATFORM}" == "Linux"
 	$(MAKE) uninstall -C aureate/
 .endif
@@ -37,6 +43,8 @@ clean:
 	$(MAKE) clean -C dmenu/
 	$(MAKE) clean -C nsxiv/
 	$(MAKE) clean -C samurai/
+	$(MAKE) clean -C cproc/
+	$(MAKE) clean -C cproc/qbe/
 .if "${PLATFORM}" == "Linux"
 	$(MAKE) clean -C aureate/
 .endif

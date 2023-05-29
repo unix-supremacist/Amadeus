@@ -13,3 +13,6 @@
 [submodule "samurai"]
 	path = samurai
 	url = https://github.com/unix-supremacist/samurai
+[submodule "cproc"]
+	path = cproc
+	url = https://github.com/unix-supremacist/cproc
