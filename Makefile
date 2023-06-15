@@ -1,20 +1,6 @@
 PLATFORM != uname
-CPROC != command -v cproc
-DOAS != command -v doas
 
-.if "${CPROC}" == ""
-	$(MAKE) install -C cproc/
-	$(MAKE) install -C cproc/qbe/
-.endif
-
-install_packages:
-.if "${PLATFORM}" == "Linux"
-.if "${DOAS}" == ""
-	pacman --noconfirm -Sy doas mpv
-.endif
-.endif
-
-install: install_packages
+install:
 	$(MAKE) install -C st/
 #todo why is dmenu/nsxiv not building on cproc?
 	CC=cc $(MAKE) install -C dmenu/

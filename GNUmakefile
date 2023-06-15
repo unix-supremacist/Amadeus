@@ -1,15 +1,8 @@
-BMAKE != pacman -Q bmake
-
-install_bmake:
-ifeq (${BMAKE},'error: package 'bmake' was not found')
-	pacman --noconfirm -Sy bmake
-endif
-
-install: install_bmake
+install:
 	bmake install
 
-uninstall: install_bmake
+uninstall:
 	bmake uninstall
 
-clean: install_bmake
+clean:
 	bmake clean
